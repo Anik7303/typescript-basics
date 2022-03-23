@@ -1,8 +1,27 @@
-function add(num1: number, num2: number) {
-  return num1 + num2;
+import axios from "axios";
+
+const url = "https://jsonplaceholder.typicode.com/todos/1";
+
+interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
 }
 
-const number1 = 5
-const number2 = 2.8
+axios.get(url).then((response) => {
+  const data = response.data as Todo;
 
-console.log(add(number1, number2))
+  const id = data.id;
+  const title = data.title;
+  const finished = data.completed;
+
+  logTodo(id, title, finished);
+});
+
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(`
+  The Todo with ID: ${id}
+  Has a title of: ${title}
+  Is it finished: ${completed}
+  `);
+};
