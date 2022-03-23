@@ -1,0 +1,40 @@
+{
+  "name": "typescript-basics",
+  "version": "0.0.1",
+  "description": "Understanding basics of Typescript",
+  "main": "index.js",
+  "scripts": {
+    "server": "lite-server",
+    "typescript": "tsc index.ts --watch",
+    "dev": "npm-run-all --parallel server typescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Anik7303/typescript-basics.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Webpack",
+    "React",
+    "Node"
+  ],
+  "author": {
+    "name": "Anik Mohammad",
+    "email": "anik7303@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anik7303/typescript-basics/issues"
+  },
+  "homepage": "https://github.com/Anik7303/typescript-basics#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.11.0",
+    "lite-server": "^2.6.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
