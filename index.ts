@@ -16,3 +16,18 @@ let now: Date = new Date();
 let colors: string[] = ["red", "blue", "green"];
 let myNumber: number[] = [1, 2, 3];
 let truths: boolean[] = [true, false, true];
+
+// classes
+class Car {}
+let car: Car = new Car();
+
+// object literal
+let point: { x: number; y: number } = {
+  x: 10,
+  y: 20,
+};
+
+// function
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+};
