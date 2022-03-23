@@ -11,3 +11,8 @@ let nothing: undefined = undefined;
 
 // buildt in objects
 let now: Date = new Date();
+
+// Array
+let colors: string[] = ["red", "blue", "green"];
+let myNumber: number[] = [1, 2, 3];
+let truths: boolean[] = [true, false, true];
