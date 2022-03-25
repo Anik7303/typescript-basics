@@ -20,3 +20,10 @@ const myCAr = carMakers.pop();
 carMakers.map((car: string):string => {
   return car.toUpperCase();
 })
+
+// arrays with multiple types
+// const importantDates: (string | Date)[] = ['10/12/2021', new Date(), '04/04/2008']
+const importantDates = ['10/12/2021', new Date(), '04/04/2008']
+importantDates.push(new Date())
+importantDates.push('26-03-2022')
+// importantDates.push(100) // shows an error
