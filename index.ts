@@ -1,65 +1,22 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prefer-const */
+const carMakers = ['ford', 'toyota', 'chevy']
+const dates = [new Date(), new Date()]
 
-const add = (a: number, b: number): number => {
-  return a + b;
-};
+// const carsByMake: string[][] = [
+//   ['f150'],
+//   ['corolla'],
+//   ['camaro']
+// ]
+const carsByMake: string[][] = []
 
-const subtract = (a: number, b: number): number => {
-  return a - b;
-};
 
-function multiply(a: number, b: number): number {
-  return a * b;
-}
+// Help with inference when extracting values
+const car = carMakers[0]
+const myCAr = carMakers.pop();
 
-const divide = function (a: number, b: number): number {
-  return a / b;
-};
+// Prevent incompatible values
+// carMakers.push(100)
 
-// void annotation type
-const logger = (message: string): void => {
-  console.log(message);
-};
-
-const throwError = (message: string): never => {
-  throw new Error(message);
-};
-
-// destructuring annotations
-const todaysWeather: { date: Date; weather: string } = {
-  date: new Date(),
-  weather: "sunny",
-};
-
-const logWeather = ({
-  date,
-  weather,
-}: {
-  date: Date;
-  weather: string;
-}): void => {
-  console.log(date);
-  console.log(weather);
-};
-
-logWeather(todaysWeather);
-
-// objects
-const profile = {
-  name: "alex",
-  age: 20,
-  coords: {
-    lat: 0,
-    lng: 15,
-  },
-  setAge(age: number): void {
-    this.age = age;
-  },
-};
-
-const { age }: { age: number } = profile;
-
-const {
-  coords: { lat, lng },
-}: { coords: { lat: number; lng: number } } = profile;
+// Help with 'map'
+carMakers.map((car: string):string => {
+  return car.toUpperCase();
+})
