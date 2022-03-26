@@ -1,12 +1,22 @@
-const drink = {
-  color: 'brown',
-  carbonated: true,
-  sugar: 40
+// Interfaces
+
+interface Vehicle {
+  name: string;
+  year: number;
+  broken: boolean;
 }
 
-// type alias
-type Drink = [string, boolean, number]
+const oldChivic = {
+  name: 'chivic',
+  year: 2000,
+  broken: true
+}
 
-const pepsi: [string, boolean, number] = ['brown', true, 40]
-const sprite: Drink = ['clear', true, 40]
-const tea: Drink = ['brown', false, 0]
+// const printVehicle = (vehicle: {name: string; year: number; broken: boolean}): void => {
+const printVehicle = (vehicle: Vehicle): void => {
+console.log(`Name: ${vehicle.name}`)
+  console.log(`Year: ${vehicle.year}`)
+  console.log(`Broken? ${vehicle.broken}`)
+}
+
+printVehicle(oldChivic)
