@@ -1,0 +1,28 @@
+{
+  "name": "maps",
+  "version": "0.0.1",
+  "description": "An app to generate random users with map location",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Anik7303/typescript-maps.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Parcel",
+    "Map"
+  ],
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {},
+  "author": "Anik Mohammad <anik7303@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anik7303/typescript-maps/issues"
+  },
+  "homepage": "https://github.com/Anik7303/typescript-maps#readme"
+}
