@@ -1,6 +1,16 @@
 // Classes
 
 class Vehicle {
+  // public color: string;
+
+  // constructor(color: string) {
+  //   this.color = color;
+  // }
+
+  constructor(public color: string) {}
+  // constructor(protected color: string) {}
+  // constructor(private color: string) {}
+
   protected drive(): void {
     console.log("vroom");
   }
@@ -14,19 +24,20 @@ class Vehicle {
   }
 }
 
-class Car extends Vehicle {
-  protected drive(): void {
-    console.log("vrooooom");
-  }
+// class Car extends Vehicle {
+//   protected drive(): void {
+//     console.log("vrooooom");
+//   }
 
-  public initializeDrive(): void {
-    this.drive();
-  }
-}
+//   public initializeDrive(): void {
+//     this.drive();
+//   }
+// }
 
-const vehicle = new Vehicle();
+const vehicle = new Vehicle("red");
 // vehicle.drive();
 vehicle.honk();
+console.log(vehicle.color);
 
-const car = new Car();
-car.initializeDrive();
+// const car = new Car();
+// car.initializeDrive();
