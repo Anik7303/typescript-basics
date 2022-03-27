@@ -24,20 +24,29 @@ class Vehicle {
   }
 }
 
-// class Car extends Vehicle {
-//   protected drive(): void {
-//     console.log("vrooooom");
-//   }
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
 
-//   public initializeDrive(): void {
-//     this.drive();
-//   }
-// }
+  protected drive(): void {
+    console.log("vrooooom");
+  }
+
+  public initializeDrive(): void {
+    this.drive();
+  }
+
+  public getColor(): string {
+    return this.color;
+  }
+}
 
 const vehicle = new Vehicle("red");
 // vehicle.drive();
 vehicle.honk();
 console.log(vehicle.color);
 
-// const car = new Car();
-// car.initializeDrive();
+const car = new Car(4, "orange");
+car.initializeDrive();
+console.log(car.getColor());
