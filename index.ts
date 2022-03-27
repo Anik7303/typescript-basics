@@ -1,21 +1,15 @@
-// Interfaces
+// Classes
 
-interface Vehicle {
-  summary(): string;
+class Vehicle {
+  drive(): void {
+    console.log("vroom");
+  }
+
+  honk(): void {
+    console.log("beep");
+  }
 }
 
-const oldChivic = {
-  name: "chivic",
-  year: 2000,
-  broken: true,
-  summary() {
-    return `Name: ${this.name}`;
-  },
-};
-
-// const printVehicle = (vehicle: {name: string; year: number; broken: boolean}): void => {
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary);
-};
-
-printVehicle(oldChivic);
+const vehicle = new Vehicle();
+vehicle.drive();
+vehicle.honk();
