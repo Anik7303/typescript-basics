@@ -2,6 +2,7 @@ import { MatchData } from "./MatchData";
 import { MatchResult } from "./MatchResult";
 import { DataReader } from "./DataReader";
 import { dateStringtoDate } from "./utils";
+import { CSVFileReader } from "./CSVFileReader";
 
 export class MatchDataReader {
   matches: MatchData[] = [];
@@ -22,6 +23,10 @@ export class MatchDataReader {
         row[6],
       ]
     );
+  }
+
+  static fromCSV(filename: string): MatchDataReader {
+    return new MatchDataReader(new CSVFileReader(filename));
   }
 }
 
