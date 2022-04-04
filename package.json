@@ -2,9 +2,9 @@
   "name": "typescript-basics",
   "version": "0.0.1",
   "description": "Understanding basics of Typescript",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "build:ts": "tsc index.ts --watch",
+    "build:ts": "tsc --watch",
     "build:run": "nodemon ./build/index.js",
     "start": "run-p build:ts build:run"
   },
