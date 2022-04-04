@@ -6,7 +6,7 @@
   "scripts": {
     "build:watch": "tsc --watch",
     "build:run": "nodemon ./build/index.js",
-    "start": "concurrently 'npm:build:watch' 'npm:build:run' -k"
+    "start": "concurrently 'npm:build:watch' 'npm:build:run'"
   },
   "repository": {
     "type": "git",
