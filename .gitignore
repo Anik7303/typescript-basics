@@ -1,6 +1,6 @@
+# node package files
 /node_modules
 package-lock.json
 
-# ignore javascript files
-*.js
-
+# build files
+/build

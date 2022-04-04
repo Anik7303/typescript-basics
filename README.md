@@ -1,2 +1,3 @@
 # Typescript: Basics
 
+## Generics

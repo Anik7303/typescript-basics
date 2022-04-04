@@ -4,7 +4,9 @@
   "description": "Understanding basics of Typescript",
   "main": "index.js",
   "scripts": {
-    "typescript": "tsc index.ts --watch"
+    "build:ts": "tsc index.ts --watch",
+    "build:run": "nodemon ./build/index.js",
+    "start": "run-p build:ts build:run"
   },
   "repository": {
     "type": "git",
@@ -12,8 +14,6 @@
   },
   "keywords": [
     "Typescript",
-    "Webpack",
-    "React",
     "Node"
   ],
   "author": {
@@ -29,9 +29,8 @@
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "eslint": "^8.11.0",
-    "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "typescript": "^4.6.2"
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.3"
   }
 }
