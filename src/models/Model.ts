@@ -39,6 +39,10 @@ export class Model<T extends HasId> {
     return this.attributes.get;
   }
 
+  get getAll() {
+    return this.attributes.getAll;
+  }
+
   // shortened syntax for getters with drawbacks in some perticular cases
   // on = this.events.on;
   // trigger = this.events.trigger;
