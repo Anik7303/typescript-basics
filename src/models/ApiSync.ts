@@ -4,8 +4,8 @@ interface HasId {
   id?: number;
 }
 
-export class Sync<T extends HasId> {
-  constructor(public url: string) {
+export class ApiSync<T extends HasId> {
+  constructor(private url: string) {
     this.fetch = this.fetch.bind(this);
     this.save = this.save.bind(this);
   }

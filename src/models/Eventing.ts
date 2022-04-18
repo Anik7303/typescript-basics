@@ -1,7 +1,7 @@
 type Callback = () => void;
 
-export class Events {
-  events: { [key: string]: Callback[] } = {};
+export class Eventing {
+  private events: { [key: string]: Callback[] } = {};
 
   constructor() {
     this.on = this.on.bind(this);
