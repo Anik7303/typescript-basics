@@ -5,7 +5,10 @@ interface HasId {
 }
 
 export class Sync<T extends HasId> {
-  constructor(public url: string) {}
+  constructor(public url: string) {
+    this.fetch = this.fetch.bind(this);
+    this.save = this.save.bind(this);
+  }
 
   fetch(id: number): AxiosPromise<T> {
     return axios.get(`${this.url}/${id}`);
