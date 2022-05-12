@@ -6,12 +6,14 @@ export class UserForm extends View<User, UserProps> {
     super(parent, model);
     this.onSetAgeClick = this.onSetAgeClick.bind(this);
     this.onSetNameClick = this.onSetNameClick.bind(this);
+    this.onSaveModelClick = this.onSaveModelClick.bind(this);
   }
 
   eventsMap(): { [key: string]: () => void } {
     return {
       "click:.set-age": this.onSetAgeClick,
       "click:.set-name": this.onSetNameClick,
+      "click:.save-model": this.onSaveModelClick,
     };
   }
 
@@ -28,17 +30,23 @@ export class UserForm extends View<User, UserProps> {
     this.model.setRandomAge();
   }
 
+  onSaveModelClick(): void {
+    this.model.save();
+  }
+
   template(): string {
     return `
       <div>
-        <h2>User Form</h2>
-        <div>User Name: ${this.model.get("name")}</div>
-        <div>User Age: ${this.model.get("age")}</div>
         <div>
-          <input />
+          <input placeholder="${this.model.get("name")}" />
           <button class="set-name">Change Name</button>
         </div>
-        <button class="set-age">Set Random Age</button>
+        <div>
+          <button class="set-age">Set Random Age</button>
+        </div>
+        <div>
+          <button class="save-model">Save User</button>
+        </div>
       </div>
     `;
   }
