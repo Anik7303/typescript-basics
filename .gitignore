@@ -1,0 +1,12 @@
+# output directory
+/build
+
+# node package files
+/node_modules
+
+# misc
+package-lock.json
+
+# all javascript files
+*.js
+
