@@ -1,3 +1,3 @@
 # Typescript: Basics
 
-## Generics
+## Decorators

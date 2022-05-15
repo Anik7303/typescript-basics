@@ -1,48 +1,17 @@
-class ArrayOfAnything<T> {
-  constructor(private collection: T[]) {}
+class Boat {
+  private color = "red";
 
-  get(index: number): T {
-    return this.collection[index];
+  get formattedColor(): string {
+    return `This boat is colored ${this.color}`;
+  }
+
+  @logError
+  pilot(): void {
+    console.log("swish");
   }
 }
 
-// const arr = new ArrayOfAnything<string>(["a", "b", "c", "d"]);
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const arr = new ArrayOfAnything(["a", "b", "c", "d"]); // This is equivalant to the previous line because of type inference in typescript
-
-// Generics with Functions
-function printAnything<T>(arr: T[]): void {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-  }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function logError(target: any, key: string): void {
+  console.log({ target, key });
 }
-
-// printAnything<number>([1, 2, 3, 4])
-printAnything([1, 2, 3, 4]);
-
-// Generic Constraints
-
-interface Printable {
-  print(): void;
-}
-
-class Car {
-  print(): void {
-    console.log("I am a car");
-  }
-}
-
-class House {
-  print(): void {
-    console.log("I am a house");
-  }
-}
-
-function printHousesOrCars<T extends Printable>(arr: T[]) {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].print();
-  }
-}
-
-printHousesOrCars<House>([new House(), new House()]);
-printHousesOrCars<Car>([new Car(), new Car()]);
