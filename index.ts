@@ -1,19 +1,27 @@
-import "reflect-metadata";
+import axios from "axios";
 
-class Plane {
-  color = "red";
+const url = "https://jsonplaceholder.typicode.com/todos/1";
 
-  fly(): void {
-    console.log("vrrrrr");
-  }
+interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
 }
 
-// assign metadata to a class
-// Reflect.defineMetadata("secret", "secret info", Plane);
-// const secret = Reflect.getMetadata("secret", Plane);
-// console.log({ secret });
+axios.get(url).then((response) => {
+  const data = response.data as Todo;
 
-// assign metadata to a property of class
-Reflect.defineMetadata("secret", "secret info", Plane, "color");
-const secret = Reflect.getMetadata("secret", Plane, "color");
-console.log({ secret });
+  const id: number = data.id;
+  const title: string = data.title;
+  const finished: boolean = data.completed;
+
+  logTodo(id, title, finished);
+});
+
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(`
+  The Todo with ID: ${id}
+  Has a title of: ${title}
+  Is it finished: ${completed}
+  `);
+};
