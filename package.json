@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:server": "nodemon ./build/index.js",
-    "start": "run-p start:build start:server"
+    "build:run": "tsc -w",
+    "build:server": "nodemon ./build/index.js",
+    "start": "run-p build:run build:server"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,8 @@
     "@types/cookie-session": "^2.0.44",
     "@types/express": "^4.17.13",
     "cookie-session": "^2.0.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "nodemon": "^2.0.16",
