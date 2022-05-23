@@ -1,0 +1,17 @@
+# node package files
+/node_modules
+package-lock.json
+
+# environment variables
+.env
+
+# yarn
+.yarn
+yarn.lock
+
+# output directory
+/build
+
+# misc
+*.js
+
